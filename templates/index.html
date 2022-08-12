@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict Water stable aggregate (0.25mm)</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Quartz" placeholder="Quartz" required="required" />
+        <input type="text" name="K-feldspar" placeholder="K-feldspar" required="required" />
+        <input type="text" name="Plagioclase" placeholder="Plagioclase" required="required" />
+        <input type="text" name="Dolomite" placeholder="Dolomite" required="required" />
+        <input type="text" name="Magnesite" placeholder="Magnesite" required="required" />
+        <input type="text" name="Halloysite" placeholder="Halloysite" required="required" />
+        <input type="text" name="Dickite" placeholder="Dickite" required="required" />
+        <input type="text" name="Chlorite" placeholder="Chlorite" required="required" />
+        <input type="text" name="Serpentine" placeholder="Serpentine" required="required" />
+        <input type="text" name="Olivine" placeholder="Olivine" required="required" />
+        <input type="text" name="Titanite" placeholder="Titanite" required="required" />
+        <input type="text" name="Epidote" placeholder="Epidote" required="required" />
+        <input type="text" name="Ilmenite" placeholder="Ilmenite" required="required" />
+        <input type="text" name="Tourmaline" placeholder="Tourmaline" required="required" />
+        <input type="text" name="Spinel" placeholder="Spinel" required="required" />
+        <input type="text" name="Kerogen" placeholder="Kerogen" required="required" />
+        <input type="text" name="Pyroxene" placeholder="Pyroxene" required="required" />
+        <input type="text" name="Boehmite" placeholder="Boehmite" required="required" />
+        <input type="text" name="Hematite" placeholder="Hematite" required="required" />
+        <input type="text" name="Chalcopyrite" placeholder="Chalcopyrite" required="required" />
+        <input type="text" name="Natrite" placeholder="Natrite" required="required" />
+        <input type="text" name="Nahcolite" placeholder="Nahcolite" required="required" />
+        <input type="text" name="Organic matter" placeholder="Organic matter" required="required" />
+        <input type="text" name="Illite" placeholder="Illite" required="required" />
+        <input type="text" name="Anhydrite" placeholder="Anhydrite" required="required" />
+        <input type="text" name="Muscovite" placeholder="Muscovite" required="required" />
+        <input type="text" name="Opal" placeholder="Opal" required="required" />
+        <input type="text" name="Mica (Tri)" placeholder="Mica (Tri)" required="required" />
+        <input type="text" name="Alunite" placeholder="Alunite" required="required" />
+        <input type="text" name="Calcite" placeholder="Calcite" required="required" />
+        <input type="text" name="Aragonite" placeholder="Aragoite" required="required" />
+        <input type="text" name="Amphibole" placeholder="Amphibole" required="required" />
+        <input type="text" name="Kaolinite" placeholder="Kaolinite" required="required" />
+        <input type="text" name="Ferrihydrite" placeholder="Ferrihydrite" required="required" />
+        <input type="text" name="Vermiculite" placeholder="Vermiculite" required="required" />
+        <input type="text" name="Smectite (Di)" placeholder="Smectite (Di)" required="required" />
+        <input type="text" name="Tephra" placeholder="Tephra" required="required" />
+        <input type="text" name="Carbon (%)" placeholder="Carbon (%)" required="required" />
+        <input type="text" name="Horz_Position" placeholder="Horz_Position" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
